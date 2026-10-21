@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Way Back · בקרוב</title>
+<meta name="description" content="מעלים את הצ'אט של הקבוצה ומקבלים את ההיסטוריה שלכם: סטטיסטיקות, חידון מי אמר, כרטיסי פיפ״א וציר זמן של התקופות.">
+<meta property="og:title" content="Way Back · לקבוצה שלכם יש היסטוריה">
+<meta property="og:description" content="סטטיסטיקות, חידון מי אמר, כרטיסי פיפ״א וציר זמן של התקופות. מהצ'אט שלכם בוואטסאפ.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700;800&family=Assistant:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #f6efe3;
+    --paper-2: #efe4d2;
+    --ink: #2b2118;
+    --ink-soft: #6b5a49;
+    --accent: #d9542f;
+    --accent-ink: #fff8f0;
+    --card: #fffaf2;
+    --line: #e2d5c0;
+    --shadow: 0 10px 30px rgba(60, 40, 20, .12);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #1d1813;
+      --paper-2: #26201a;
+      --ink: #f3e9da;
+      --ink-soft: #b8a890;
+      --accent: #f07a52;
+      --accent-ink: #1d1813;
+      --card: #2a231c;
+      --line: #3b3128;
+      --shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Assistant", system-ui, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    min-height: 100vh;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  header { padding: 28px 0; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: "Rubik", sans-serif; font-weight: 800; font-size: 24px; letter-spacing: -.5px; direction: ltr; }
+  .logo span { color: var(--accent); }
+  .badge {
+    font-size: 14px; font-weight: 600; color: var(--ink-soft);
+    border: 1.5px dashed var(--line); border-radius: 999px; padding: 4px 14px;
+  }
+
+  .hero { padding: 48px 0 40px; text-align: center; }
+  h1 {
+    font-family: "Rubik", sans-serif; font-weight: 800;
+    font-size: clamp(36px, 7vw, 64px); line-height: 1.1; letter-spacing: -1px;
+    max-width: 14ch; margin: 0 auto 20px;
+  }
+  h1 em { font-style: normal; color: var(--accent); }
+  .sub { color: var(--ink-soft); font-size: 20px; max-width: 34ch; margin: 0 auto 32px; }
+
+  .cta {
+    display: inline-block; background: var(--accent); color: var(--accent-ink);
+    font-family: "Rubik", sans-serif; font-weight: 700; font-size: 18px;
+    padding: 16px 32px; border-radius: 14px; text-decoration: none;
+    box-shadow: var(--shadow); transition: transform .15s ease;
+  }
+  .cta:hover { transform: translateY(-2px); }
+  .cta-note { display: block; margin-top: 12px; font-size: 15px; color: var(--ink-soft); }
+
+  .polaroids {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    padding: 56px 0 24px;
+  }
+  .polaroid {
+    background: var(--card); border: 1px solid var(--line); border-radius: 6px;
+    padding: 14px 14px 22px; box-shadow: var(--shadow);
+  }
+  .polaroid:nth-child(1) { transform: rotate(2deg); }
+  .polaroid:nth-child(2) { transform: rotate(-1.5deg) translateY(12px); }
+  .polaroid:nth-child(3) { transform: rotate(1deg); }
+  .photo {
+    aspect-ratio: 4 / 3; border-radius: 3px; background: var(--paper-2);
+    display: grid; place-items: center; font-size: 56px; margin-bottom: 14px;
+  }
+  .polaroid h3 { font-family: "Rubik", sans-serif; font-weight: 700; font-size: 20px; margin-bottom: 4px; }
+  .polaroid p { color: var(--ink-soft); font-size: 16px; line-height: 1.5; }
+
+  .privacy {
+    margin: 56px auto 0; max-width: 620px; text-align: center;
+    border-top: 1.5px dashed var(--line); padding-top: 32px;
+  }
+  .privacy h2 { font-family: "Rubik", sans-serif; font-weight: 700; font-size: 22px; margin-bottom: 8px; }
+  .privacy p { color: var(--ink-soft); }
+
+  footer { padding: 56px 0 32px; text-align: center; font-size: 14px; color: var(--ink-soft); }
+
+  @media (max-width: 720px) {
+    .hero { padding-top: 24px; }
+    .polaroids { grid-template-columns: 1fr; max-width: 360px; margin: 0 auto; gap: 28px; }
+    .polaroid:nth-child(2) { transform: rotate(-1.5deg); }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">Way<span>.</span>Back</div>
+      <div class="badge">בקרוב · דצמבר</div>
+    </header>
+
+    <section class="hero">
+      <h1>לקבוצה שלכם יש <em>היסטוריה.</em> הגיע הזמן לראות אותה.</h1>
+      <p class="sub">מעלים את הצ'אט של הקבוצה מוואטסאפ, עונים על כמה שאלות, ומקבלים דברים שבא לכם לשלוח ישר לקבוצה.</p>
+      <a class="cta" id="waitlist" href="#">שמרו לי מקום</a>
+      <span class="cta-note">נעדכן אתכם ברגע שזה עולה. בלי ספאם.</span>
+    </section>
+
+    <section class="polaroids">
+      <div class="polaroid">
+        <div class="photo">🤔</div>
+        <h3>מי אמר את זה?</h3>
+        <p>חידון עם ציטוטים אמיתיים מהקבוצה. מי שמנחש הכי הרבה מנצח.</p>
+      </div>
+      <div class="polaroid">
+        <div class="photo">⚽</div>
+        <h3>כרטיסי פיפ״א</h3>
+        <p>כרטיס לכל חבר: מהירות תגובה, קללות, היעלמויות, ותואר שמגיע לו.</p>
+      </div>
+      <div class="polaroid">
+        <div class="photo">📼</div>
+        <h3>התקופות שלכם</h3>
+        <p>ההיסטוריה של הקבוצה מחולקת לתקופות, עם הרגעים שאף אחד לא שכח.</p>
+      </div>
+    </section>
+
+    <section class="privacy">
+      <h2>הצ'אט שלכם לא נשמר</h2>
+      <p>קוראים אותו פעם אחת, מכינים לכם את הדברים ומוחקים. כפתור אחד מוחק הכל.</p>
+    </section>
+
+    <footer>Way Back · 2026</footer>
+  </div>
+
+  <script>
+    // Paste the waitlist form link here (Google Form or Tally) once it exists.
+    var WAITLIST_URL = "";
+    var btn = document.getElementById("waitlist");
+    if (WAITLIST_URL) { btn.href = WAITLIST_URL; btn.target = "_blank"; btn.rel = "noopener"; }
+  </script>
+</body>
+</html>
